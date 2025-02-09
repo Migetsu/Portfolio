@@ -11,14 +11,14 @@ $weight in $Montserrat {
     }
 }
 
-$Lobster: 
-('Regular', 400);
+// $Lobster: 
+// ('Regular', 400);
 
-@each $name,
-$weight in $Lobster {
-    @font-face {
-        font-family: 'Lobster';
-        src: url('@/assets/fonts/Lobster/Lobster-#{$name}.ttf');
-        font-weight: $weight;
-    }
-}
+// @each $name,
+// $weight in $Lobster {
+//     @font-face {
+//         font-family: 'Lobster';
+//         src: url('@/assets/fonts/Lobster/Lobster-#{$name}.ttf');
+//         font-weight: $weight;
+//     }
+// }
