@@ -1,0 +1,202 @@
+.intro {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 100px;
+
+    &__content {
+        max-width: 600px;
+
+        @include media(320) {
+            max-width: 280px;
+        }
+
+        & h1 {
+            color: #ededed;
+            font-size: 3.5rem;
+            font-weight: 700;
+
+            & span {
+                color: #00abf0;
+                font-weight: 700;
+            }
+        }
+
+        & h3 {
+            font-size: 2rem;
+            color: #00abf0;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        & p {
+            font-size: 1rem;
+            color: #ededed;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+    }
+
+    &__box {
+        position: relative;
+        display: flex;
+        gap: 30px;
+
+        &-btn {
+            position: relative;
+            background: #00abf0;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #081b29;
+            cursor: pointer;
+            border: 2px solid #00abf0;
+            z-index: 1;
+            transition: .5s;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: #081b29;
+                z-index: -1;
+                transition: .5s;
+            }
+    
+            &:hover::before {
+                width: 100%;
+            }
+
+            &:hover {
+                color: #00abf0;
+            }
+        }
+    }
+
+    &__social {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        gap: 30px;
+
+        &-link {
+            color: #00abf0;
+            font-size: 40px;
+            transition: .4s;
+
+            &:hover {
+                scale: 1.3;
+                // color: #081b29;
+            }
+        }
+    }
+
+    &__portfolio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media(968) {
+            display: none;
+        }
+
+        & h3 {
+            color: #ededed;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        &-items {
+            width: 740px;
+            display: grid;
+            grid-template-columns: repeat(2, 4fr);
+            gap: 20px;
+
+            @include media(1024) {
+                width: 550px;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            height: 100%;
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            transition: .5s;
+
+            &:hover {
+                scale: 1.05;
+                box-shadow: 0 0 18px #333;
+            }
+
+            & img {
+                // width: 280px;
+                width: 100%;
+                height: 145px;
+            }
+
+            & p {
+                color: #ededed;
+                text-align: center;
+                margin: 5px 0 10px 0;
+                font-size: 18px;
+            }
+
+            & a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 35px;
+                background: #00abf0;
+                border: 2px solid #00abf0;
+                border-radius: 8px;
+                font-size: 19px;
+                color: #081b29;
+                text-decoration: none;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-align: center;
+                transition: .5s;
+                z-index: 1;
+                overflow: hidden;
+                margin: 0 auto;
+
+                &:hover {
+                    color: #00abf0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: #081b29;
+                    z-index: -1;
+                    transition: .5s;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.nav {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    &.color {
+        animation: scroll 1s forwards linear;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: .4s;
+
+        @include media(968) {
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        &-logo {
+            color: #00abf0;
+            font-family: "Lobster";
+            font-weight: 700;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        &-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &-link {
+            position: relative;
+            color: #ededed;
+            font-size: 1.2rem;
+            transition: .4s;
+
+            @include media(968) {
+                display: none;
+            }
+
+            &:hover {
+                color: #00abf0;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                bottom: -4px;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background-color: #00abf0;
+                transition: 0.3s linear;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+
+        &-icon {
+            position: relative;
+            color: #ededed;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: .4s;
+
+            @include media(968) {
+                font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+            }
+
+            &:hover {
+                color: #00abf0;
+            }
+        }
+    }
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    display: none;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: .4s linear;
+
+    & .links {
+        margin-top: 80px;
+        & a {
+            display: flex;
+            color: white;
+            justify-content: center;
+            padding: 25px 0;
+            background: #43778b;
+            align-items: center;
+            transition: .2s linear;
+
+            &:hover {
+                background-color: #00abf0;
+            }
+        }
+    }
+}
+
+.hamburg {
+    cursor: pointer;
+    right: 20px;
+    color: white;
+    display: none;
+    pointer-events: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+
+    @include media(968) {
+        pointer-events: visible;
+        display: flex;
+    }
+}
+
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    color: white;
+    display: none;
+    pointer-events: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    transition: .4s;
+
+    @include media(968) {
+        pointer-events: visible;
+        display: flex;
+    }
+}
+
+.dropdown-visible {
+    transition: .5s;
+    transform: translateY(0) !important;
+    display: block !important;
+}

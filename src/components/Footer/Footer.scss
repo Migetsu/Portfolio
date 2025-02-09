@@ -1,0 +1,23 @@
+.footer {
+    background: #4EA0F5;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+    & .text {
+        & span {
+            font-size: 17px;
+            font-weight: 400;
+            color: #fff;
+
+            & a {
+                font-weight: 500;
+                color: #fff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

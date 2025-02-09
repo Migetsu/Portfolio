@@ -1,0 +1,252 @@
+@mixin media($size) {
+    @media(max-width: #{$size}px) {
+        @content
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    // font-family: "Lobster";
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background: #081b29;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.loading {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__spiner {
+        height: 50px;
+        width: 50px;
+        border: 2px solid transparent;
+        border-top: 2px solid green;
+        border-radius: 50%;
+        animation: loading 1s infinite ease-in-out;
+    }
+}
+
+section {
+    min-height: 100vh;
+}
+
+// Start
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+//     background: rgb(85, 35, 221);
+// }
+
+::-webkit-scrollbar-thumb {
+    background: #181FE5;
+    border-radius: 12px;
+    transition: all .3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #181FE5;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+
+    & .title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        & span {
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 8px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                background: #181FE5;
+                left: 0;
+                bottom: 0;
+            }
+
+            &::after {
+                bottom: -7px;
+                width: 70%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    & .content {
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.lang {
+    position: relative;
+
+    &-dropdown {
+        position: absolute;
+        top: 100px;
+        right: 300px;
+        width: 125px;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        background: black;
+        transition: all .4s ease;
+
+        @include media(968) {
+            top: 90px;
+            right: 0;
+        }
+
+        &.active {
+            transition: all .4s ease;
+            display: flex;
+        }
+
+        & button {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            transition: .5s;
+            z-index: 3;
+            font-size: 20px;
+            font-weight: 700;
+            background: transparent;
+            color: #fff;
+        }
+
+        &-span {
+            position: absolute;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            transition: .5s;
+            background: blue;
+            z-index: 2;
+            transform: translateX(75px);
+
+            &.active {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.language {
+    display: none;
+
+    @include media(968) {
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding: 15px 0;
+        align-items: center;
+        transition: .2s linear;
+        font-size: 25px;
+        // margin-right: 50px;
+    }
+}
+
+// End
+
+@keyframes animate {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.05;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        background: transparent;
+    }
+
+    100% {
+        background: #081b29;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
