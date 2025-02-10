@@ -1,4 +1,8 @@
 .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &-img {
         // width: 450px;
         width: 100%;

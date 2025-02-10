@@ -4,17 +4,29 @@
     padding: 0 10%;
     gap: 100px;
 
+    @include media(500) {
+        padding: 0 5%;
+    }
+
     &__content {
         max-width: 600px;
 
         @include media(320) {
-            max-width: 280px;
+            max-width: 320px;
+        }
+
+        @include media(500) {
+            max-width: 300px;
         }
 
         & h1 {
             color: #ededed;
             font-size: 3.5rem;
             font-weight: 700;
+
+            @include media(500) {
+                font-size: 2.3rem;
+            }
 
             & span {
                 color: #00abf0;
@@ -28,6 +40,10 @@
             margin-top: 10px;
             margin-bottom: 20px;
             font-weight: 700;
+
+            @include media(500) {
+                font-size: 1.5rem;
+            }
         }
 
         & p {
@@ -35,6 +51,11 @@
             color: #ededed;
             margin-bottom: 40px;
             line-height: 1.5;
+
+            @include media(500) {
+                // font-size: .8rem;
+                text-align: justify;
+            }
         }
     }
 
@@ -61,6 +82,12 @@
             z-index: 1;
             transition: .5s;
             overflow: hidden;
+
+            @include media(500) {
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+            }
 
             &::before {
                 content: '';

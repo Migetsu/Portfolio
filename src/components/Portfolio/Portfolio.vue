@@ -21,24 +21,24 @@
               <p>NF</p>
             </a>
           </div>
-          <!-- <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+          <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
             <a href="#" target="_blank">
               <img src="@/assets/images/cinephile_preview.jpg" alt="" class="portfolio-img">
               <p>Cinephile</p>
             </a>
-          </div> -->
-          <!-- <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+          </div>
+          <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
             <a href="#" target="_blank">
               <img src="@/assets/images/cinephile_preview.jpg" alt="" class="portfolio-img">
               <p>Cinephile</p>
             </a>
-          </div> -->
-          <!-- <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
+          </div>
+          <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
             <a href="#" target="_blank">
               <img src="@/assets/images/cinephile_preview.jpg" alt="" class="portfolio-img">
               <p>Cinephile</p>
             </a>
-          </div> -->
+          </div>
 
         </div>
 
