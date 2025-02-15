@@ -30,9 +30,12 @@
       </div>
     </div>
 
-    <div class="dropdown" :class="{ 'dropdown-visible': dropdownVisible }">
+    <transition name="fade">
+      <div class="dropdown" :class="{ 'dropdown-visible': dropdownVisible }">
+        <div class="dropdown-logo" @click="resetScroll, toggleDropdown(false)">{{ $t('myName') }}
+        </div>
       <div class="links">
-        <a href="#" @click="scrollToSection($event, 'about'), toggleDropdown(false)">{{ $t('intro') }}</a>
+        <a href="#" @click="scrollToSection($event, 'intro'), toggleDropdown(false)">{{ $t('about') }}</a>
         <a href="#" @click="scrollToSection($event, 'skills'), toggleDropdown(false)">{{ $t('skills') }}</a>
         <a href="#" @click="scrollToSection($event, 'portfolio'), toggleDropdown(false)">{{ $t('portfolio')
           }}</a>
@@ -40,6 +43,7 @@
         <fa :icon="['fas', 'xmark']" @click="toggleDropdown(false)" class="cancel" />
       </div>
     </div>
+    </transition>
   </nav>
 </template>
 

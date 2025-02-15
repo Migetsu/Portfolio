@@ -101,22 +101,38 @@
     top: 0;
     transform: translateY(-500px);
     width: 100%;
-    display: none;
     height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px black;
-    transition: .4s linear;
+    // backdrop-filter: blur(4px) brightness(40%);
+    // box-shadow: 0 0 20px black;
+    background: #081b29;
+    transition: all .4s ease;
+
+    &-logo {
+        color: #00abf0;
+        font-weight: 700;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 21px;
+        left: 15px;
+    }
 
     & .links {
         margin-top: 80px;
+
         & a {
             display: flex;
             color: white;
             justify-content: center;
             padding: 25px 0;
-            background: #43778b;
+            // background: #43778b;
             align-items: center;
             transition: .2s linear;
+            border-bottom: 2px solid gray;
+
+            &:nth-child(1) {
+                border-top: 2px solid gray;
+            }
 
             &:hover {
                 background-color: #00abf0;
@@ -148,7 +164,7 @@
     display: none;
     pointer-events: none;
     font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-    transition: .4s;
+    transition: all .4s ease;
 
     @include media(968) {
         pointer-events: visible;
@@ -157,7 +173,18 @@
 }
 
 .dropdown-visible {
-    transition: .5s;
     transform: translateY(0) !important;
-    display: block !important;
+    // display: block !important;
+
+    &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1000px;
+        // backdrop-filter: blur(4px) brightness(80%);
+        backdrop-filter: blur(4px);
+        // box-shadow: 0 0 20px black;
+    }
 }
