@@ -3,8 +3,8 @@
     <Navbar/>
     <Intro/>
     <Skills/>
-    <Portfolio/>
-    <Contact/>
+    <!-- <Portfolio/> -->
+    <!-- <Contact/> -->
   </main>
   <footer class="footer">
     <Footer/>

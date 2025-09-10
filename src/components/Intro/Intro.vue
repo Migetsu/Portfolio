@@ -27,20 +27,20 @@
                     <a href="https://migetsu.github.io/Cinephile/#/" target="_blank">{{ $t('viewMore') }}</a>
                 </div>
                 <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
-                    <img src="@/assets/images/cinephile_preview.jpg" alt="">
-                    <p>Cinephile</p>
-                    <a href="https://migetsu.github.io/Cinephile/#/" target="_blank">{{ $t('viewMore') }}</a>
+                    <img src="@/assets/images/cocktails_preview.jpg" alt="">
+                    <p>Cocktails</p>
+                    <a href="https://migetsu.github.io/Cocktails/#/" target="_blank">{{ $t('viewMore') }}</a>
                 </div>
                 <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="700">
+                    <img src="@/assets/images/anichrono_preview.jpg" alt="">
+                    <p>AniChrono</p>
+                    <a href="https://anichrono.vercel.app/" target="_blank">{{ $t('viewMore') }}</a>
+                </div>
+                <!-- <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
                     <img src="@/assets/images/cinephile_preview.jpg" alt="">
                     <p>Cinephile</p>
                     <a href="https://migetsu.github.io/Cinephile/#/" target="_blank">{{ $t('viewMore') }}</a>
-                </div>
-                <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
-                    <img src="@/assets/images/cinephile_preview.jpg" alt="">
-                    <p>Cinephile</p>
-                    <a href="https://migetsu.github.io/Cinephile/#/" target="_blank">{{ $t('viewMore') }}</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

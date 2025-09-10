@@ -11,7 +11,7 @@
           </div>
           <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
             <a href="https://migetsu.github.io/Owo/" target="_blank">
-              <img src="@/assets/images/owo_preview.jpg" alt="" class="portfolio-img">
+              <img src="@/assets/images/cinephile_preview.jpg" alt="" class="portfolio-img">
               <p>OwO</p>
             </a>
           </div>

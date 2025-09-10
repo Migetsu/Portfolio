@@ -13,7 +13,7 @@
                         <div class="bar"><span></span></div>
                     </div>
                     <div class="progress">
-                        <h3>CSS <span>80%</span></h3>
+                        <h3>CSS <span>90%</span></h3>
                         <div class="bar"><span></span></div>
                     </div>
                     <div class="progress">
@@ -38,7 +38,7 @@
                         <div class="bar"><span></span></div>
                     </div>
                     <div class="progress">
-                        <h3>Typescript <span>70%</span></h3>
+                        <h3>Composition API <span>70%</span></h3>
                         <div class="bar"><span></span></div>
                     </div>
                     <div class="progress">

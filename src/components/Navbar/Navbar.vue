@@ -10,12 +10,12 @@
         <a href="#" class="nav__content-link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"
           @click="scrollToSection($event, 'skills')">{{
             $t('skills') }}</a>
-        <a href="#" class="nav__content-link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"
+        <!-- <a href="#" class="nav__content-link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"
           @click="scrollToSection($event, 'portfolio')">{{
-            $t('portfolio') }}</a>
-        <a href="#" class="nav__content-link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"
+            $t('portfolio') }}</a> -->
+        <!-- <a href="#" class="nav__content-link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"
           @click="scrollToSection($event, 'contact')">{{
-            $t('contact') }}</a>
+            $t('contact') }}</a> -->
         <fa :icon="['fas', 'sliders-h']" class="nav__content-icon fa lang"
           @click="langDropdownActive = !langDropdownActive" data-aos="fade-up" data-aos-duration="1500"
           data-aos-delay="600" />
@@ -37,9 +37,8 @@
       <div class="links">
         <a href="#" @click="scrollToSection($event, 'intro'), toggleDropdown(false)">{{ $t('about') }}</a>
         <a href="#" @click="scrollToSection($event, 'skills'), toggleDropdown(false)">{{ $t('skills') }}</a>
-        <a href="#" @click="scrollToSection($event, 'portfolio'), toggleDropdown(false)">{{ $t('portfolio')
-          }}</a>
-        <a href="#" @click="scrollToSection($event, 'contact'), toggleDropdown(false)">{{ $t('contact') }}</a>
+        <!-- <a href="#" @click="scrollToSection($event, 'portfolio'), toggleDropdown(false)">{{ $t('portfolio')}}</a> -->
+        <!-- <a href="#" @click="scrollToSection($event, 'contact'), toggleDropdown(false)">{{ $t('contact') }}</a> -->
         <fa :icon="['fas', 'xmark']" @click="toggleDropdown(false)" class="cancel" />
       </div>
     </div>
