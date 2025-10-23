@@ -36,11 +36,11 @@
                     <p>AniChrono</p>
                     <a href="https://anichrono.vercel.app/" target="_blank">{{ $t('viewMore') }}</a>
                 </div>
-                <!-- <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
-                    <img src="@/assets/images/cinephile_preview.jpg" alt="">
-                    <p>Cinephile</p>
-                    <a href="https://migetsu.github.io/Cinephile/#/" target="_blank">{{ $t('viewMore') }}</a>
-                </div> -->
+                <div class="intro__portfolio-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
+                    <img src="@/assets/images/weatherapp_preview.jpg" alt="">
+                    <p>Weather-App</p>
+                    <a href="https://migetsu.github.io/weather-app/" target="_blank">{{ $t('viewMore') }}</a>
+                </div>
             </div>
         </div>
     </section>
